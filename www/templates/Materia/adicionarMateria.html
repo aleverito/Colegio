@@ -1,0 +1,26 @@
+
+<ion-modal-view class="usersModal bigModal">
+    <ion-header-bar>
+        <h1 class="title">Adicionar Materia</h1>
+        <button class="button button-dark icon ion-close-round" ng-click="closeModal();"></button>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="guardar(nombre_add,cargaH_add)" id="datosMaestro-form16" class="list" name="formulario">
+            <label class="item item-input item-stacked-label" id="datosMaestro-input19">
+                <span class="input-label">Nombre</span>
+                <input type="text" placeholder="" name="nombre_add" ng-model="nombre_add" ng-required="true" ng-maxlength="30">
+                <span class="assertive h6" ng-show="formulario.nombre_add.$dirty && formulario.nombre_add.$error.required"><i class="icon ion-alert"></i>No dejar espacio en blanco</span>
+                <span class="assertive h6" ng-show="formulario.nombre_add.$dirty && formulario.nombre_add.$error.maxlength"><i class="icon ion-close"></i>No mas de 30 caracteres</span>                
+            </label>
+            <label class="item item-input item-stacked-label" id="datosMaestro-input19">
+                <span class="input-label">Carga Horaria</span>
+                <input type="text" placeholder="" name="cargaH_add" ng-model="cargaH_add" ng-required="true" ng-maxlength="10">
+                <span class="assertive h6" ng-show="formulario.cargaH_add.$dirty && formulario.cargaH_add.$error.required"><i class="icon ion-alert"></i>No dejar espacio en blanco</span>
+                <span class="assertive h6" ng-show="formulario.cargaH_add.$dirty && formulario.cargaH_add.$error.maxlength"><i class="icon ion-close"></i>No mas de 10 caracteres</span>                
+            </label>
+        <div id="datosMaestro-button-bar7" class="button-bar">
+            <button type="submit"  id="datosMaestro-button30" style="border-radius:50px 50px 50px 50px;" class="button button-positive  button-block icon ion-android-send">Guardar</button>
+        </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

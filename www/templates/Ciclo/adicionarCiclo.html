@@ -1,0 +1,23 @@
+<ion-view title="Adicionar" id="page13">
+    <ion-content padding="true" class="has-header">
+        <form ng-submit="guardar()" id="datosMaestro-form16" class="list" name="formulario">
+            <label class="item item-input item-stacked-label" id="datosMaestro-input18">
+                <span class="input-label">Cod_Ciclo</span>
+                <input type="text" placeholder="" name="rda" ng-model="rda" ng-required="true" ng-minlength="1" ng-maxlength="8">
+                <span class="assertive h6" ng-show="formulario.rda.$dirty && formulario.rda.$error.required"><i class="icon ion-alert"></i>No dejar espacio en blanco</span>
+                <span class="assertive h6" ng-show="formulario.rda.$dirty && formulario.rda.$error.maxlength"><i class="icon ion-close"></i>No mas de 8 caracteres</span>
+                <span class="assertive h6" ng-show="formulario.rda.$dirty && formulario.rda.$error.minlength"><i class="icon ion-close"></i>No menos de 1 caracter</span>
+            </label>
+             <label class="item item-input item-stacked-label" id="datosMaestro-input19">
+                <span class="input-label">Nombre</span>
+                <input type="hidden" name="ci_ant" ng-model="ci_ant" ng-required="true">
+                <input type="text" placeholder="" name="ci" ng-model="ci" ng-required="true" ng-maxlength="50">
+                <span class="assertive h6" ng-show="formulario.ci.$dirty && formulario.ci.$error.required"><i class="icon ion-alert"></i>No dejar espacio en blanco</span>
+                <span class="assertive h6" ng-show="formulario.ci.$dirty && formulario.ci.$error.maxlength"><i class="icon ion-close"></i>No mas de 50 caracteres</span>                
+            </label>
+        <div id="datosMaestro-button-bar7" class="button-bar">
+            <button type="submit"  id="datosMaestro-button30" style="border-radius:50px 50px 50px 50px;" class="button button-positive  button-block icon ion-android-send">Guardar</button>
+        </div>
+        </form>
+    </ion-content>
+</ion-view>

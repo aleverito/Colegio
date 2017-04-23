@@ -1,0 +1,28 @@
+<ion-view class="itemView pane" view-title="Adicionar Curso" ng-style="{ 'background-color': item.color }" nav-view="active" style="transform: translate3d(0%, 0px, 0px); opacity: 1; " hide-nav-bar="false">
+    <ion-content padding="true" class="has-header">
+		<div class="list card">
+			<form class="list" ng-submit="adicionarCurso()" id="aAdirCurso-form18" name="formulario">
+            <label id="aAdirCurso-input38" class="item item-input item-stacked-label">
+                <span class="input-label">Nombre</span>
+                <input placeholder="" type="text" ng-model='nombre'>
+            </label>
+            <label id="aAdirCurso-input38" class="item item-input item-stacked-label">
+                <span class="input-label">Gestion:</span>
+                <input placeholder="" type="number" ng-model="gestion" name="getion" ng-required="true" ng-maxlength="4">
+                <span class="assertive h6" ng-show="formulario.gestion"></span>
+            </label>
+            <label class="item item-input item-select">
+				<div class="input-label">
+				  Ciclo:
+				</div>
+				<select name="idciclo" ng-model="idciclo">
+				  <option ng-repeat = "ciclo in ciclos" value="{{ciclo.ID_CICLO}}">{{ciclo.NOMBRE}}</option>
+				</select>
+			</label>
+	        <div class="button-bar" id="aAdirCurso-button-bar10">
+	            <button type="submit" class="button button-positive  button-block" id="btn-addCurso">Guardar</button>
+	        </div>
+        </form>
+		</div>
+	</ion-content>
+</ion-view>

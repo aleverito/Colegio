@@ -1,0 +1,32 @@
+<ion-view class="itemView pane" view-title="Editar" ng-style="{ 'background-color': item.color }" nav-view="active" style="transform: translate3d(0%, 0px, 0px); opacity: 1; " hide-nav-bar="false">
+    <ion-content padding="true" class="has-header">
+		<div class="list card">
+			<form class="list" ng-submit="editarCurso()" id="aAdirCurso-form18">
+            <label id="aAdirCurso-input38" class="item item-input">
+                <span class="input-label">Nombre</span>
+                <input placeholder="" type="text" ng-model='curso.NOMBRE' value = "">
+                <input type="hidden" ng-model='id_c' value = "{{curso.ID_C}}">
+            </label>
+            <label id="aAdirCurso-input38" class="item item-input">
+                <span class="input-label">Gestion:</span>
+                <input placeholder="" type="number" ng-model="curso.gestion" value = "">
+            </label>
+            <label id="aAdirCurso-input38" class="item item-input">
+                <span class="input-label" style='font-weight:900;'>Ciclo: {{curso.nombreCiclo}}</span>
+            </label>
+	
+            <label class="item item-input item-select">
+				<div class="input-label">
+				  Seleccione un Ciclo:
+				</div>
+				<select name="idciclo" ng-model="curso.ciclo">
+				  <option   ng-repeat = "ciclo in ciclos" value="{{ciclo.ID_CICLO}}">{{ciclo.NOMBRE}}</option>
+				</select>
+			</label>
+	        <div class="button-bar" id="aAdirCurso-button-bar10">
+	            <button type="submit" class="button button-positive  button-block" id="btn-addCurso">Guardar</button>
+	        </div>
+        </form>
+		</div>
+	</ion-content>
+</ion-view>
